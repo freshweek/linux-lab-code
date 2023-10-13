@@ -58,6 +58,7 @@ static void __exit kthread_exit(void)
 {
 	/* TODO: notify the kernel thread that its time to exit */
   atomic_set(&flag_stop_thread, 1);
+  wake_up_interruptible(&wq_stop_thread);
 	/* TODO: wait for the kernel thread to exit */
   wait_event_interruptible(wq_thread_terminated, atomic_read(&flag_thread_terminated));
 
