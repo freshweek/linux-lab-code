@@ -11,6 +11,7 @@ disk2.img
 /out/
 /rootfs
 
+so2_cdev_test
 
 # SPDX-License-Identifier: GPL-2.0-only
 #
